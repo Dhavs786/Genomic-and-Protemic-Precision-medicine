@@ -475,7 +475,12 @@ export default function App() {
                     style={{ width: '100%', justifyContent: 'center' }}
                     disabled={isLoading || !uploadFile}
                   >
-                    {isLoading ? 'Running Prediction...' : 'Generate AI Report'}
+                    {isLoading ? (
+                      <>
+                        <RefreshCw className="animate-spin" size={16} style={{ marginRight: '0.5rem' }} />
+                        Analyzing...
+                      </>
+                    ) : 'Generate AI Report'}
                   </button>
                 </div>
 
@@ -488,7 +493,16 @@ export default function App() {
                     </div>
                   </div>
 
-                  {!predictionResults ? (
+                  {isLoading ? (
+                    <div className="scan-container">
+                      <div className="scan-bar"></div>
+                      <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🧬</div>
+                      <h4 style={{ fontWeight: 700, color: 'var(--slate-800)', marginBottom: '0.5rem' }}>Analyzing Tissue Profile...</h4>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.8125rem', textAlign: 'center', maxWidth: '240px' }}>
+                        Mapping expression targets and computing XGBoost drug sensitivity index.
+                      </p>
+                    </div>
+                  ) : !predictionResults ? (
                     <div style={{ textAlign: 'center', padding: '4rem 1rem', color: 'var(--slate-400)' }}>
                       <Database size={48} style={{ margin: '0 auto 1rem', strokeWidth: 1.5 }} />
                       <p style={{ fontSize: '0.875rem' }}>Upload a profile to compute drug response probability charts.</p>
