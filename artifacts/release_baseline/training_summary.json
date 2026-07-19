@@ -1,0 +1,37 @@
+{
+  "model_type": "xgboost_baseline",
+  "n_rows": 471495,
+  "n_train": 329419,
+  "n_validation": 72702,
+  "n_test": 69374,
+  "n_drugs": 286,
+  "feature_columns": [
+    "DRUG_NAME",
+    "TCGA_DESC",
+    "TARGET",
+    "TARGET_PATHWAY",
+    "GDSC Tissue descriptor 1",
+    "GDSC Tissue descriptor 2",
+    "Cancer Type (matching TCGA label)",
+    "Microsatellite instability Status (MSI)",
+    "Screen Medium",
+    "Growth Properties",
+    "Gene Expression",
+    "CNA",
+    "Methylation"
+  ],
+  "validation_metrics": {
+    "accuracy": 0.6068058650381007,
+    "precision": 0.6393719636696472,
+    "recall": 0.497534516765286,
+    "f1": 0.5596056077645971,
+    "roc_auc": 0.6472246306284098
+  },
+  "test_metrics": {
+    "accuracy": 0.6669501542364574,
+    "precision": 0.6945293247905372,
+    "recall": 0.6048760945458708,
+    "f1": 0.6466098713693581,
+    "roc_auc": 0.7070505241697707
+  }
+}

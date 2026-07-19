@@ -1,0 +1,74 @@
+{
+  "lung_adenocarcinoma": {
+    "TCGA_DESC": "LUAD",
+    "GDSC Tissue descriptor 1": "lung",
+    "GDSC Tissue descriptor 2": "lung_NSCLC_adenocarcinoma",
+    "Cancer Type (matching TCGA label)": "LUAD",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "hpv_infected_cervical_carcinoma": {
+    "TCGA_DESC": "CESC",
+    "GDSC Tissue descriptor 1": "urogenital_system",
+    "GDSC Tissue descriptor 2": "cervix",
+    "Cancer Type (matching TCGA label)": "CESC",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "breast_carcinoma": {
+    "TCGA_DESC": "BRCA",
+    "GDSC Tissue descriptor 1": "breast",
+    "GDSC Tissue descriptor 2": "breast_carcinoma",
+    "Cancer Type (matching TCGA label)": "BRCA",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "colon_adenocarcinoma": {
+    "TCGA_DESC": "COREAD",
+    "GDSC Tissue descriptor 1": "large_intestine",
+    "GDSC Tissue descriptor 2": "colorectal_adenocarcinoma",
+    "Cancer Type (matching TCGA label)": "COREAD",
+    "Microsatellite instability Status (MSI)": "MSI",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "cutaneous_melanoma": {
+    "TCGA_DESC": "SKCM",
+    "GDSC Tissue descriptor 1": "skin",
+    "GDSC Tissue descriptor 2": "melanoma",
+    "Cancer Type (matching TCGA label)": "SKCM",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "ebv_infected_lymphoblastoid": {
+    "TCGA_DESC": "LAML",
+    "GDSC Tissue descriptor 1": "leukemia",
+    "GDSC Tissue descriptor 2": "acute_myeloid_leukaemia",
+    "Cancer Type (matching TCGA label)": "LAML",
+    "Microsatellite instability Status (MSI)": "MSI-H",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "suspension",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  }
+}
