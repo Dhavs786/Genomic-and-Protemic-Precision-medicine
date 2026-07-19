@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: medicate-ai
+    env: python
+    buildCommand: pip install -e . && cd frontend && npm install && npm run build && cd .. && python -m gdsc_drug_response.seed_data
+    startCommand: python -m uvicorn gdsc_drug_response.api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9

@@ -4,6 +4,7 @@
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev)
 [![XGBoost](https://img.shields.io/badge/XGBoost-1E8C1E?style=for-the-badge&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Dhavs786/Genomic-and-Protemic-Precision-medicine)
 
 Medicate AI is a professional, clinical-grade precision medicine platform designed to translate high-throughput pharmacogenomics data into actionable therapeutic decisions. The system integrates basal cell line screening data across both **GDSC1** and **GDSC2** datasets to predict optimal drug sensitivity profile recommendations using an advanced XGBoost machine learning pipeline.
 
