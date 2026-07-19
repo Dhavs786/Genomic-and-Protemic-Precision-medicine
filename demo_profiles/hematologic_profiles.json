@@ -1,0 +1,26 @@
+{
+  "acute_myeloid_leukemia": {
+    "TCGA_DESC": "LAML",
+    "GDSC Tissue descriptor 1": "leukemia",
+    "GDSC Tissue descriptor 2": "acute_myeloid_leukaemia",
+    "Cancer Type (matching TCGA label)": "LAML",
+    "Microsatellite instability Status (MSI)": "MSI-H",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "suspension",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "multiple_myeloma": {
+    "TCGA_DESC": "MM",
+    "GDSC Tissue descriptor 1": "myeloma",
+    "GDSC Tissue descriptor 2": "myeloma",
+    "Cancer Type (matching TCGA label)": "MM",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "suspension",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  }
+}

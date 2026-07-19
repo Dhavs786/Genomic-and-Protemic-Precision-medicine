@@ -1,0 +1,38 @@
+{
+  "breast_invasive_carcinoma": {
+    "TCGA_DESC": "BRCA",
+    "GDSC Tissue descriptor 1": "breast",
+    "GDSC Tissue descriptor 2": "breast_carcinoma",
+    "Cancer Type (matching TCGA label)": "BRCA",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "ovarian_serous_cystadenocarcinoma": {
+    "TCGA_DESC": "OV",
+    "GDSC Tissue descriptor 1": "ovary",
+    "GDSC Tissue descriptor 2": "ovary",
+    "Cancer Type (matching TCGA label)": "OV",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "cervical_squamous_cell_carcinoma": {
+    "TCGA_DESC": "CESC",
+    "GDSC Tissue descriptor 1": "urogenital_system",
+    "GDSC Tissue descriptor 2": "cervix",
+    "Cancer Type (matching TCGA label)": "CESC",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  }
+}

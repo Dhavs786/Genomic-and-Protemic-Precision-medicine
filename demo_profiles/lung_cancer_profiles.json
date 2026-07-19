@@ -1,0 +1,38 @@
+{
+  "lung_adenocarcinoma": {
+    "TCGA_DESC": "LUAD",
+    "GDSC Tissue descriptor 1": "lung",
+    "GDSC Tissue descriptor 2": "lung_NSCLC_adenocarcinoma",
+    "Cancer Type (matching TCGA label)": "LUAD",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "lung_squamous_cell_carcinoma": {
+    "TCGA_DESC": "LUSC",
+    "GDSC Tissue descriptor 1": "lung",
+    "GDSC Tissue descriptor 2": "lung_NSCLC_squamous",
+    "Cancer Type (matching TCGA label)": "LUSC",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "small_cell_lung_carcinoma": {
+    "TCGA_DESC": "SCLC",
+    "GDSC Tissue descriptor 1": "lung",
+    "GDSC Tissue descriptor 2": "lung_SCLC",
+    "Cancer Type (matching TCGA label)": "SCLC",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "suspension",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  }
+}

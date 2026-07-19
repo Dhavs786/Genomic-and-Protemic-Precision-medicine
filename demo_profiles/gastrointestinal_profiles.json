@@ -1,0 +1,38 @@
+{
+  "colon_adenocarcinoma": {
+    "TCGA_DESC": "COREAD",
+    "GDSC Tissue descriptor 1": "large_intestine",
+    "GDSC Tissue descriptor 2": "colorectal_adenocarcinoma",
+    "Cancer Type (matching TCGA label)": "COREAD",
+    "Microsatellite instability Status (MSI)": "MSI",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "stomach_adenocarcinoma": {
+    "TCGA_DESC": "STAD",
+    "GDSC Tissue descriptor 1": "stomach",
+    "GDSC Tissue descriptor 2": "stomach_adenocarcinoma",
+    "Cancer Type (matching TCGA label)": "STAD",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  },
+  "pancreatic_carcinoma": {
+    "TCGA_DESC": "PAAD",
+    "GDSC Tissue descriptor 1": "pancreas",
+    "GDSC Tissue descriptor 2": "pancreatic_carcinoma",
+    "Cancer Type (matching TCGA label)": "PAAD",
+    "Microsatellite instability Status (MSI)": "MSS",
+    "Screen Medium": "RPMI",
+    "Growth Properties": "adherent",
+    "Gene Expression": "Y",
+    "CNA": "Y",
+    "Methylation": "Y"
+  }
+}
