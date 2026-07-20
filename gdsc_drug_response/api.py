@@ -25,8 +25,9 @@ from gdsc_drug_response.database import (
 # --- Constants ---
 
 DRUG_PANEL = [
-    "Cisplatin", "Docetaxel", "Gemcitabine",
-    "Paclitaxel", "Vinblastine", "Erlotinib", "Gefitinib",
+    "Cisplatin", "Docetaxel", "Gemcitabine", "Paclitaxel",
+    "Vinblastine", "Erlotinib", "Gefitinib", "Vorinostat",
+    "Venetoclax", "Sorafenib", "Trametinib", "Dasatinib",
 ]
 
 
@@ -38,21 +39,54 @@ class Predictor:
         self.feature_columns = artifact["feature_columns"]
         self.feature_spec = artifact.get("feature_spec")
 
+        # Load compounds table to merge TARGET and TARGET_PATHWAY if available
+        compounds_path = Path("dataset/Compounds-annotation.csv")
+        if compounds_path.exists():
+            compdf = pd.read_csv(compounds_path)
+            compdf["DRUG_NAME"] = compdf["DRUG_NAME"].astype(str).str.strip()
+            self.compounds = compdf.sort_values(["DRUG_NAME"]).drop_duplicates(subset=["DRUG_NAME"], keep="first")
+        else:
+            self.compounds = None
+
     def predict_ranked_drugs(self, features: dict[str, Any], drugs: list[str]) -> pd.DataFrame:
+        import numpy as np
+
+        # Normalize incoming categorical strings to match trained model levels
+        norm_features = dict(features)
+        if norm_features.get("Screen Medium") == "RPMI":
+            norm_features["Screen Medium"] = "R"
+        
+        msi_val = norm_features.get("Microsatellite instability Status (MSI)")
+        if msi_val == "MSS":
+            norm_features["Microsatellite instability Status (MSI)"] = "MSS/MSI-L"
+        elif msi_val == "MSI":
+            norm_features["Microsatellite instability Status (MSI)"] = "MSI-H"
+        
+        gp_val = norm_features.get("Growth Properties")
+        if isinstance(gp_val, str):
+            norm_features["Growth Properties"] = gp_val.capitalize()
+
         rows = []
         for drug in drugs:
             row = {"DRUG_NAME": drug}
-            row.update(features)
+            row.update(norm_features)
             rows.append(row)
         
-        import numpy as np
         frame = pd.DataFrame(rows)
+        
+        # Merge target and pathway features if available
+        if self.compounds is not None:
+            frame = frame.merge(
+                self.compounds[["DRUG_NAME", "TARGET", "TARGET_PATHWAY"]],
+                on="DRUG_NAME",
+                how="left",
+            )
+        
         for column in self.feature_columns:
             if column not in frame.columns:
                 frame[column] = np.nan
         
         frame = frame[self.feature_columns]
-        
         probabilities = self.model.predict_proba(frame)[:, 1]
 
         result = pd.DataFrame({
